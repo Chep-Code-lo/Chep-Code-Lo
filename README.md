@@ -63,10 +63,14 @@ I am a ....
 
 <!-- Stats Cards -->
 <div align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=Chep-Code-lo&theme=dracula&hide_border=true&date_format=j%20M%5B%20Y%5D&ring=ff79c6&fire=ff79c6&currStreakLabel=bd93f9&sideLabels=bd93f9" alt="GitHub Streak" width="49%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Chep-Code-lo&theme=dracula" alt="GitHub Stats" width="49%" />
+</div>
+<div align="center">
   <table>
     <tr>
-      <td><img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Chep-Code-lo&theme=dracula" alt="GitHub Stats" /></td>
       <td><img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Chep-Code-lo&theme=dracula" alt="Top Languages" /></td>
+      <td><img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Chep-Code-lo&theme=dracula" alt="Most Commit Language" /></td>
       <td><img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Chep-Code-lo&theme=dracula&utcOffset=7" alt="Productive Time" /></td>
     </tr>
   </table>
