@@ -1,0 +1,51 @@
+name: Generate GitHub Stats
+
+on:
+  schedule:
+    # Chạy mỗi ngày lúc 6:00 AM UTC (1 PM giờ VN)
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    name: Generate Stats SVG
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Tạo stats.svg (Thống kê tổng quan)
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: profile/stats.svg
+          base: header, activity, community, repositories
+          config_timezone: Asia/Ho_Chi_Minh
+          config_display: columns
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+      # Tạo top-langs.svg (Ngôn ngữ lập trình)
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: profile/top-langs.svg
+          base: ""
+          plugin_languages: yes
+          plugin_languages_ignored: >-
+            html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, gnuplot
+          plugin_languages_limit: 8
+          config_timezone: Asia/Ho_Chi_Minh
+
+      - name: Commit & Push changes
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add -A
+          git diff --staged --quiet || git commit -m "chore: update github stats [skip ci]"
+          git push
