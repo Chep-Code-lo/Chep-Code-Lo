@@ -25,7 +25,6 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           MAX_REPOS: 10
           SETTING_JSON: conf/github-profile-3d-contrib.json
-          OUTPUT_DIR: profile
 
       - name: Commit & Push
         run: |
