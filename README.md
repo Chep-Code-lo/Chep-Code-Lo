@@ -65,10 +65,10 @@ I am a ....
 <div align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Chep-Code-lo&theme=dracula" alt="GitHub Stats" />
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Chep-Code-lo&theme=dracula" alt="Top Languages" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Chep-Code-lo&theme=dracula&utcOffset=7" alt="Productive Time" />
 </div>
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Chep-Code-lo&theme=dracula&utcOffset=7" alt="Productive Time" />
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Chep-Code-lo&theme=dracula" alt="Profile Details" width="60%" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Chep-Code-lo&theme=dracula" alt="Profile Details" width="100%" />
 </div>
 
 ---
