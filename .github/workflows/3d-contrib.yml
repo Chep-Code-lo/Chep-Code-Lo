@@ -26,6 +26,11 @@ jobs:
           MAX_REPOS: 10
           SETTING_JSON: conf/github-profile-3d-contrib.json
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: update 3D contribution graph [skip ci]"
+      - name: Commit & Push
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git pull --rebase origin main
+          git add -A
+          git diff --staged --quiet || git commit -m "chore: update 3D contribution graph [skip ci]"
+          git push

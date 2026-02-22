@@ -36,6 +36,11 @@ jobs:
           plugin_languages_limit: 8
           config_timezone: Asia/Ho_Chi_Minh
 
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: update github stats [skip ci]"
+      - name: Commit & Push
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git pull --rebase origin main
+          git add -A
+          git diff --staged --quiet || git commit -m "chore: update github stats [skip ci]"
+          git push
