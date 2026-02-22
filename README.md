@@ -63,8 +63,12 @@ I am a ....
 
 <!-- Stats Cards -->
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Chep-Code-lo&theme=dracula&hide_border=true&show_icons=true&count_private=true&include_all_commits=true" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chep-Code-lo&theme=dracula&hide_border=true&layout=compact&langs_count=8&count_private=true" alt="Top Languages" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Chep-Code-lo&theme=dracula" alt="GitHub Stats" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Chep-Code-lo&theme=dracula" alt="Top Languages" />
+</div>
+<div align="center">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Chep-Code-lo&theme=dracula&utcOffset=7" alt="Productive Time" />
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Chep-Code-lo&theme=dracula" alt="Profile Details" width="60%" />
 </div>
 
 ---
