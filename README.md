@@ -7,7 +7,7 @@
   <h1>Hi, I'm PHẠM HỒNG ANH (Chep-code-lo)</h1>
 
   <!-- Updated color to Dracula Pink (#ff79c6) -->
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=ff79c6&center=true&vCenter=true&multiline=true&width=500&height=140&lines=Học+IT+chuyên+attt+nhưng+vibe+coder;Bị+band+k+lấy+đc;Chỉ+biết+làm+word;)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=5000&pause=2000&color=ff79c6&center=true&vCenter=true&multiline=true&width=500&height=140&lines=Học+IT+chuyên+attt+nhưng+vibe+coder;Bị+band+k+lấy+đc;Chỉ+biết+làm+word;)](https://git.io/typing-svg)
 
   <p>
     <a href="https://www.linkedin.com/in/anh-ph%E1%BA%A1m-4675983a6/"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
