@@ -70,8 +70,6 @@ I am a ....
       <td><img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Chep-Code-lo&theme=dracula&utcOffset=7" alt="Productive Time" /></td>
     </tr>
   </table>
-  <br/>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Chep-Code-lo&theme=dracula" alt="Profile Details" />
 </div>
 
 ---
