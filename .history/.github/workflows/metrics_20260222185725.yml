@@ -1,0 +1,46 @@
+name: Generate GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    name: Generate Stats SVG
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: profile/stats.svg
+          base: header, activity, community, repositories
+          config_timezone: Asia/Ho_Chi_Minh
+
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: profile/top-langs.svg
+          base: ""
+          plugin_languages: yes
+          plugin_languages_limit: 8
+          config_timezone: Asia/Ho_Chi_Minh
+
+      - name: Commit & Push
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add -A
+          git diff --staged --quiet || git commit -m "chore: update github stats [skip ci]"
+          git pull --rebase origin main
+          git push
