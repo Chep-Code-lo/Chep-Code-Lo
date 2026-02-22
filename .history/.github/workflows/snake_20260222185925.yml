@@ -1,0 +1,36 @@
+name: Generate Snake Animation
+
+on:
+  schedule:
+    # Chạy mỗi ngày lúc 6:00 AM UTC (1 PM giờ VN)
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    name: Generate Snake SVG
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            profile/github-contribution-grid-snake.svg?color_snake=bd93f9&color_dots[0]=282a36&color_dots[1]=44475a&color_dots[2]=6272a4&color_dots[3]=bd93f9&color_dots[4]=ff79c6
+            profile/github-contribution-grid-snake-dark.svg?color_snake=ff79c6&color_dots[0]=282a36&color_dots[1]=44475a&color_dots[2]=6272a4&color_dots[3]=bd93f9&color_dots[4]=ff79c6
+
+      - name: Commit & Push
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add -A
+          git diff --staged --quiet || git commit -m "chore: update snake animation [skip ci]"
+          git pull --rebase --autostash origin main
+          git push
