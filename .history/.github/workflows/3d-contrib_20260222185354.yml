@@ -1,0 +1,36 @@
+name: GitHub Profile 3D Contrib
+
+on:
+  schedule:
+    # Chạy mỗi ngày lúc 6:00 AM UTC (1 PM giờ VN)
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Generate 3D Contribution Graph
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          MAX_REPOS: 10
+          SETTING_JSON: conf/github-profile-3d-contrib.json
+
+      - name: Commit & Push
+        run: |
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git pull --rebase origin main
+          git add -A
+          git diff --staged --quiet || git commit -m "chore: update 3D contribution graph [skip ci]"
+          git push
