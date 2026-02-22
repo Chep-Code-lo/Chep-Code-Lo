@@ -63,8 +63,8 @@ I am a ....
 
 <!-- Stats Cards -->
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Chep-Code-lo&theme=dracula&hide_border=true&show_icons=true&count_private=true" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chep-Code-lo&theme=dracula&hide_border=true&layout=compact&langs_count=8" alt="Top Languages" />
+  <img src="./profile/stats.svg" alt="GitHub Stats" />
+  <img src="./profile/top-langs.svg" alt="Top Languages" />
 </div>
 
 ---
