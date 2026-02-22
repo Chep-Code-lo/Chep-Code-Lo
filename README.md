@@ -61,6 +61,12 @@ I am a ....
 </div>
 <br/>
 
+<!-- Trophies -->
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Chep-Code-lo&theme=dracula&no-frame=true&no-bg=true&margin-w=4&row=1" alt="Trophies" width="100%" />
+</div>
+<br/>
+
 <!-- Stats Cards -->
 <div align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com?user=Chep-Code-lo&theme=dracula&hide_border=true&date_format=j%20M%5B%20Y%5D&ring=ff79c6&fire=ff79c6&currStreakLabel=bd93f9&sideLabels=bd93f9" alt="GitHub Streak" width="49%" />
