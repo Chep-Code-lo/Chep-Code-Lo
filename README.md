@@ -63,7 +63,7 @@ I am a ....
 
 <!-- Trophies -->
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Chep-Code-lo&theme=dracula&no-frame=true&no-bg=true&margin-w=4&row=1" alt="Trophies" width="100%" />
+  <img src="https://github-profile-trophy.vercel.app/?username=Chep-Code-lo&theme=dracula&no-frame=true&no-bg=true&margin-w=4&margin-h=4&column=6" alt="Trophies" />
 </div>
 <br/>
 
